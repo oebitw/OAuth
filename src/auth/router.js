@@ -22,8 +22,7 @@ const oauth = require('./middleware/oauth.js');
 ////// Routes    ////////
 ////////////////////////
 
-
-authRouter.get('/oauth_twitch',oauth,twitchHandler);
+authRouter.get('/twitch_oauth',oauth,twitchHandler);
 
 
 //////////////////////////
@@ -34,6 +33,7 @@ authRouter.get('/oauth_twitch',oauth,twitchHandler);
   
 function twitchHandler (req,res){
   res.json({ token: req.token, user: req.user });
+  // res.send('successfully signed in');
 
 }
 
