@@ -29,7 +29,6 @@ module.exports = async (req, res, next) => {
     console.log(remoteUser,'====USER=======');
 
     const [user, token] = await getUser(remoteUser);
-    console.log('after save to db', user, token);
     req.user = user;
     req.token = token;
     next();
