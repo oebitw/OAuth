@@ -42,7 +42,7 @@ app.get('/', homeHandler);
 
 // routes
 app.get('/',homeHandler);
-// app.use(authRoutes);
+app.use(authRoutes);
 
 
 
