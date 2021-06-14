@@ -32,12 +32,7 @@ authRouter.get('/twitch_oauth',oauth,twitchHandler);
 
   
 function twitchHandler (req,res){
-  res.json({
-    status: 'logged in successfully',
-    token: req.token,
-    user: req.user });
-  // res.send('successfully signed in');
-
+  res.json({token: req.token, user:req.user});
 }
 
 
